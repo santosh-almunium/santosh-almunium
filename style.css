@@ -1,0 +1,264 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #9192dc;
+}
+
+/* HEADER */
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    background: linear-gradient(135deg, #318b82, #3b82f6);
+    color: white;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.app-logo {
+    height: 100px;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+
+/* BUTTONS */
+button {
+    background: #a0ce70;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.add-staff {
+    background: #16a34a;
+    margin-bottom: 15px;
+}
+
+.edit-btn {
+    background: #f59e0b;
+    color: black;
+    margin-right: 8px;
+}
+
+.delete-btn {
+    background: #dc2626;
+    color: white;
+}
+
+.staff-card {
+    background: #f9fafb;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+button.cancel { background: #6b7280; }
+button.danger { background: #c0392b; }
+
+/* DASHBOARD */
+.dashboard {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 16px;
+}
+
+.site-box {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.site-name {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.site-amount {
+    margin-top: 6px;
+    color: #2563eb;
+}
+
+/* DETAIL */
+#detailView {
+    margin: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* FIELD CARD */
+.field-card {
+    background: #f8fafc;
+    padding: 14px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.field-card input {
+    width: 100%;
+    border: none;
+    font-size: 18px;
+    background: transparent;
+}
+
+/* AMOUNT LEFT */
+.amount-left {
+    background: #e0f2fe;
+    padding: 16px;
+    border-radius: 12px;
+    font-weight: 700;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px;
+}
+
+.modal-content input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+/* STAFF */
+.staff-card {
+    background: #f9fafb;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width:900px){
+    .dashboard{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:500px){
+    .dashboard{grid-template-columns:1fr}
+}
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.modal-actions button {
+    flex: 1;
+    margin: 0 5px;
+    background: #2563eb;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.modal-actions button.cancel {
+    background: #6b7280;
+}
+.menu-box{
+    display:none;
+    position:absolute;
+    right:20px;
+    background:white;
+    border-radius:8px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.2);
+}
+.menu-box div{
+    padding:10px;
+    cursor:pointer;
+}
+.menu-box .danger{
+    color:#c0392b;
+}
+/* SITE DETAIL TOP BAR */
+.site-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.menu-wrapper {
+    position: relative;
+}
+
+.menu-btn {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.menu-box {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 26px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    overflow: hidden;
+    z-index: 999;
+}
+
+.menu-box div {
+    padding: 12px 16px;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.menu-box div:hover {
+    background: #f1f5f9;
+}
+
+.menu-box .danger {
+    color: #dc2626;
+}
+
+/* VIEW DOCUMENT BUTTON */
+.view-doc-btn {
+    margin-top: 12px;
+    background: #2563eb;
+    color: #ffffff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 20px;
+}
+
+.app-logo {
+    width: 48px;
+    height: 48px;
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,0.15));
+}

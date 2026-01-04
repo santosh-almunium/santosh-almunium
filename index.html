@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Santosh Aluminium</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1f2937">
+
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="app-header">
+    <img src="assets/logo.png" class="app-logo">
+
+    <button id="staffBtn" onclick="openStaff()">Staff</button>
+
+    <div class="title">Santosh Aluminium</div>
+
+    <button id="addSiteBtn" onclick="openAddSite()">+ Add Site</button>
+</header>
+
+<div id="dashboard" class="dashboard"></div>
+<div id="detailView"></div>
+
+<!-- ADD SITE MODAL -->
+<div id="addSiteModal" class="modal">
+    <div class="modal-content">
+        <h3>Add Site</h3>
+        <input id="siteNameInput" placeholder="Site Name">
+        <input id="siteTotalInput" type="number" placeholder="Total Amount">
+        <input id="siteTakenInput" type="number" placeholder="Amount Taken">
+        <input id="siteDateInput" type="date">  
+        <input id="siteDocInput" type="file">
+
+        <div class="modal-actions">
+            <button onclick="createSite()">Save</button>
+            <button class="cancel" onclick="closeAddSite()">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
